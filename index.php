@@ -22,7 +22,7 @@ require('controllers/defaultController.php');
 require('controllers/bookingController.php');
 
 //http://localhost:8888/fivearena/?p=inscription
- if(isset($_GET['p'])){
+if(isset($_GET['p'])){
 
     switch ($_GET['p']) {
         case 'inscription':
@@ -91,6 +91,14 @@ require('controllers/bookingController.php');
             adminAddTerrain();
         break;
 
+        case 'admin-edit-terrain': 
+            adminEditTerrain();
+        break;
+
+        case 'admin-delete-terrain': 
+            adminDeleteTerrain();
+        break;
+
         case 'admin-list-terrain': 
             adminListTerrain();
         break;
@@ -99,8 +107,20 @@ require('controllers/bookingController.php');
             adminAddUsers();
         break;
 
+        case 'admin-edit-users': 
+            adminEditUsers();
+        break;
+
         case 'admin-list-users': 
             adminListUsers();
+        break;
+
+        case 'admin-add-booking': 
+            adminAddBooking();
+        break;
+
+        case 'admin-list-booking': 
+            adminListBooking();
         break;
         
         default:
